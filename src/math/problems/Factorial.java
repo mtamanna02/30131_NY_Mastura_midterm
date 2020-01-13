@@ -1,5 +1,7 @@
 package math.problems;
 
+import com.mysql.cj.x.protobuf.MysqlxDatatypes;
+
 /**
  * Created by mrahman on 04/02/18.
  */
@@ -11,6 +13,14 @@ public class Factorial {
          * Write a java program to find Factorial of a given number using Recursion as well as Iteration.
          *
          */
-
+        System.out.println(findFactorialUsingIteration(5));
+        System.out.println(findFactorialUsingIteration(7));
+    }
+    public static int findFactorialUsingIteration(int number){
+        int result = 1;
+        for (int i = 1; i<number;i++){
+            result=result*1;
+        }
+        return result;
     }
 }
