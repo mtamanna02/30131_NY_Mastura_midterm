@@ -17,9 +17,10 @@ public class Factorial {
         System.out.println(findFactorialUsingIteration(7));
     }
     public static int findFactorialUsingIteration(int number){
-        int result = 1;
+        int result = number;
         for (int i = 1; i<number;i++){
-            result=result*1;
+            result=result*(number-i);
+            System.out.println("This is loop number: " + i + " And the Result is: " + result);
         }
         return result;
     }

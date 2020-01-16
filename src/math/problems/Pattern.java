@@ -8,8 +8,15 @@ public class Pattern {
 		 *
 		 *
 		 */
-		
+		int p = 1;
+		for(int i=100; i>=40; i--){
 
-
+			for (int j=0; j<10; j++) {
+				i = i - p;
+				System.out.println(i);
+			}
+			i++;
+			p++;
+		}
 	}
 }

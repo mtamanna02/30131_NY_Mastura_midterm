@@ -12,5 +12,31 @@ public class Permutation {
          * Write Java program to compute all Permutation of a String
          *
          */
+        Permutation permutation =new Permutation ();
+        String actualWord = "ABC";
+        int length = actualWord.length();
+        System.out.println("All the permutation of "+actualWord+" are:");
+        generatePermutation(actualWord, 0,length);
     }
+
+    public static String swapString(String word, int i, int j){
+        char[] b = word.toCharArray();
+        char temp;
+        temp = b[i];
+        b[i] =b[j];
+        b[j] =temp;
+        return String.valueOf(b);
+    }
+    public static void generatePermutation(String str,int start, int end){
+        if(start != end-1){
+            for (int i = start; i<end; i++){
+                str = swapString(str, start, i);
+                generatePermutation(str, start+1, end);
+                str = swapString(str,start,i);
+            }
+        }else{
+            System.out.println(str);
+        }
+    }
+
 }
