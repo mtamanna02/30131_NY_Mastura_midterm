@@ -20,8 +20,18 @@ public class FindLowestDifference {
             }
         }
         System.out.println(low);
-
-
     }
 
+    public static int lowestDiff(int array1[], int array2[]) {
+        int low = array1[0];
+        for (int i = 0;i<array1.length;i++){
+            for (int j =0;j<array2.length;j++){
+                int diff = Math.abs(array1[i]-array2[j]);
+                if (diff<low){
+                    low = diff;
+                }
+            }
+        }
+        return low;
+    }
 }

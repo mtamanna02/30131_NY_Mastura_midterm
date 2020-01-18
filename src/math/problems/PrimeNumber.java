@@ -13,7 +13,7 @@ public class PrimeNumber {
 		 *
 		 */
 		boolean isPrime = false;
-		for(int i=2; i <= 1000; i++) {
+		for(int i=2; i <= 1000000; i++) {
 			for (int j=2; j<=i; j++) {
 				if(j == (i/2)+1) {
 					System.out.println(i + " is a Prime Number.");

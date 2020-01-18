@@ -58,13 +58,13 @@ public class JsonReaderUtil {
                 System.out.println(empEmail);
 
             }catch(Exception ex){
-
+                System.out.println("Something went wrong.");
             }
         }
+
         //Print to the console.
-        for(Employee entry:empList){
+        for(Employee entry : empList){
             System.out.println(entry.getEmpEmail()+" "+entry.getEmpName()+" "+entry.getSalary()+" "+entry.getDepartment());
         }
     }
-
 }
